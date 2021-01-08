@@ -1,0 +1,44 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="wrapper">
+            <h3>Danh sách người dùng</h3>
+            <p type="button" class="button-add" (click)="toCreatePage()">Thêm</p>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-list"></span>Danh sách người dùng
+                    <div class="pull-right action-buttons">
+                        
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <ul  class="list-group" *ngFor="let item of userList">
+                        <li class="list-group-item" ngClick="this">
+                            {{item.name}} | {{item.username}}
+                            <div class="pull-right action-buttons">
+                                <p (click)="toDetailPage(item._id)"><span class="glyphicon glyphicon-info-sign"></span></p>
+                                <p (click)="toUpdatePage(item._id)"><span class="glyphicon glyphicon-pencil"></span></p>
+                                <p (click)="toDeletePage(item._id)" class="trash"><span class="glyphicon glyphicon-trash"></span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>
+                                Số lượng: <span class="label label-info">{{userList.length}}</span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p type="button" class="button-add" (click)="logOut()">Đăng xuất</p>
+        </div>
+    </div>
+</div>
+

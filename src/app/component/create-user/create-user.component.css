@@ -1,0 +1,23 @@
+.container{
+    width: 50%
+}
+
+.btn-add{
+    background:  rgb(127, 157, 255);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.btn-info{
+    background:  rgb(255, 255, 255);
+    border-color:  rgb(127, 157, 255);
+    color: black;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    font-weight: bold;
+    border-radius: 5px;
+}
